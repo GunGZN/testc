@@ -29,7 +29,7 @@ if [[ -e /etc/debian_version ]]; then
 	GROUPNAME=nogroup
 	RCLOCAL='/etc/rc.local'
 
-	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="9"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="14.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="16.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="17.04"' ]]; then
+	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="9"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="20.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="16.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="17.04"' ]]; then
 echo ""
 echo ""
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
@@ -46,7 +46,7 @@ echo -e "${NC} "
 		echo "เวอร์ชั่น OS ของคุณเป็นเวอร์ชั่นที่ยังไม่รองรับ"
 		echo "สำหรับเวอร์ชั่นที่รองรับได้ จะมีดังนี้..."
 		echo ""
-		echo "Ubuntu 14.04 - 16.04 - 17.04"
+		echo "Ubuntu 20.04 - 16.04 - 18.04"
 		echo "Debian 7 - 8 - 9"
 		echo ""
 		exit
@@ -68,7 +68,7 @@ echo -e "${NC} "
 	echo "OS ที่คุณใช้ไม่สามารถรองรับได้กับสคริปท์นี้"
 	echo "สำหรับ OS ที่รองรับได้ จะมีดังนี้..."
 	echo ""
-	echo "Ubuntu 14.04 - 16.04 - 17.04"
+	echo "Ubuntu 20.04 - 16.04 - 18.04"
 	echo "Debian 7 - 8 - 9"
 	echo ""
 	exit
@@ -140,14 +140,14 @@ elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "|${GRAY} 2${NC}| INSTALL OPENVPN PRITUNL CONTROL ${GREEN} ✔   ${NC}"
 	echo -e "|${GRAY} 3${NC}| INSTALL SSH DROPBEAR ${GREEN} ✔   ${NC}"
 	echo -e "|${GRAY} 4${NC}| INSTALL WEB PANEL [Debian 7] ${GREEN} ✔   ${NC}"
-	if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
+	if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$VERSION_ID" = 'VERSION_ID="20.04"' ]]; then
 		if [[ ! -e /etc/squid3/squid.conf ]]; then
 			echo -e "|${GRAY} 5${NC}| INSTALL SQUID PROXY ${GREEN} ✔   ${NC}"
 		elif [[ -e /etc/squid3/squid.conf ]]; then
 			echo -e "|${GRAY} 5${NC}| REMOVE SQUID PROXY ${GREEN} ✔   ${NC}"
 		fi
 
-	elif [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' || "$VERSION_ID" = 'VERSION_ID="17.04"' ]]; then
+	elif [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' || "$VERSION_ID" = 'VERSION_ID="18.04"' ]]; then
 		if [[ ! -e /etc/squid/squid.conf ]]; then
 			echo -e "|${GRAY} 5${NC}| INSTALL SQUID PROXY ${GREEN} ✔   ${NC}"
 		elif [[ -e /etc/squid/squid.conf ]]; then
@@ -757,7 +757,7 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="9"' ]]; then
 			read -p "ต้องการติดตั้ง Squid Proxy หรือไม่ (Y or N) : " -e -i Y Squid
 		done
 
-# Ubuntu 14.04
+# Ubuntu 20.04
 elif [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 	echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.0.list
         echo "deb http://repo.pritunl.com/stable/apt trusty main" > /etc/apt/sources.list.d/pritunl.list

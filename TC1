@@ -11,7 +11,7 @@ read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 #รันโอเพ่นวีพีเอน
-wget https://raw.githubusercontent.com/GunGZN/v2ray2.0/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/GunGZN/runvpn2.0/main/VCN && chmod +x VCN && screen -S VCN ./VCN
 #รันวีทูเรย์
 wget https://raw.githubusercontent.com/GunGZN/v2ray2.0/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 rm -f /root/ssh-vpn.sh

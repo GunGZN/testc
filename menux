@@ -1,0 +1,6 @@
+# download script
+cd /usr/bin
+wget -O m "https://raw.githubusercontent.com/GunGZN/menu-Oxv2/main/menu.sh"
+wget -O mx "https://raw.githubusercontent.com/GunGZN/menu-Oxv2/main/menu.sh"
+chmod +x m
+chmod +x mx

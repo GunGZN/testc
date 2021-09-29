@@ -2,5 +2,5 @@
 cd /usr/bin
 wget -O mt "https://raw.githubusercontent.com/GunGZN/testc/main/menux.sh"
 wget -O mxt "https://raw.githubusercontent.com/GunGZN/testc/main/menux.sh"
-chmod +x m
-chmod +x mx
+chmod +x mt
+chmod +x mxt

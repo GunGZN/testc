@@ -1,6 +1,6 @@
 # download script
 cd /usr/bin
-wget -O m "https://raw.githubusercontent.com/GunGZN/testc/main/menux.sh"
-wget -O mx "https://raw.githubusercontent.com/GunGZN/testc/main/menux.sh"
+wget -O mt "https://raw.githubusercontent.com/GunGZN/testc/main/menux.sh"
+wget -O mxt "https://raw.githubusercontent.com/GunGZN/testc/main/menux.sh"
 chmod +x m
 chmod +x mx

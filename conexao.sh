@@ -103,7 +103,8 @@ for porta in $(echo -e $portass); do
 done
 echo -e "\n\033[1;32mติดตั้ง SQUID PROXY\033[0m"
 echo ""
-fun_bar 'apt-get update -y' 'apt-get install squid3 -y'
+fun_bar 'apt-get update -y' 'apt -y install squid3
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/GunGZN/menu-Oxv2/main/squid3.conf"
 sleep 1
 if [[ -d "/etc/squid/" ]]; then
 var_sqd="/etc/squid/squid.conf"
